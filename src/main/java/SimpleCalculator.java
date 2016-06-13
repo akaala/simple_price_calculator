@@ -1,4 +1,8 @@
+import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -8,15 +12,15 @@ import java.util.List;
 public class SimpleCalculator {
 
     public static void main(String[] args) {
-        double total = 100;
+        double total = 2280.74;
 
-        List<Double> prices = new ArrayList<>();
-        prices.add(1D);
-        prices.add(2D);
-        prices.add(3D);
-        prices.add(4D);
+        List<Double> prices = Lists.newArrayList(
+                81.07,42.8,61.29,63.39,92.76,33.93,65.86, 46.85, 61.16, 68.51,47.74,55.81,52.98,70.42,37.35);
 
+        simpleCalculate(total, prices);
+    }
 
+    public static void simpleCalculate(double total, List<Double> prices) {
         for (Double price1 : prices) {
             for (Double price2 : prices) {
                 calculateTwo(price1, price2, total);

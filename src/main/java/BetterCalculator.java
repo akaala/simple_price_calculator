@@ -16,7 +16,13 @@ public class BetterCalculator {
 
         System.out.println("总价为：" + total);
         System.out.println("各物品单价为：" + prices);
-        System.out.println("计算开始……");
+
+        System.out.println("简单计算开始……");
+
+        SimpleCalculator.simpleCalculate(total, prices);
+
+        System.out.println("复杂计算开始……");
+
 
         List<List<Integer>> results = morePrices(prices, total, 2);
         System.out.println("计算结束，可能的组合为：");
